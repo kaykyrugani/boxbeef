@@ -1,0 +1,308 @@
+# Documento de Requisitos — BOX BEEF Single Page
+
+## 1. Resumo executivo
+
+Este documento define os requisitos para o desenvolvimento do site institucional single page da BOX BEEF, marca localizada em Franca - SP, com proposta de boutique de carnes premium acessível e experiência social urbana. O site deverá apresentar a marca em uma única página, com navegação interna por âncoras, foco em conversão local, consulta rápida via celular e leitura escaneável.
+
+A página deverá comunicar de forma clara que a BOX BEEF combina carnes premium, consumo no local, espetinhos, drinks, cerveja gelada e uma proposta forte de happy hour. O objetivo é reduzir atrito na decisão do usuário, facilitando entendimento da proposta, consulta rápida do cardápio institucional, contato imediato via WhatsApp e acesso à localização.
+
+O projeto deverá ter escopo enxuto, ser implementável apenas com HTML, CSS e JavaScript puro, e não deverá incluir sistema de reservas, blog, e-commerce, bibliotecas externas, CMS, APIs complexas ou múltiplas páginas.
+
+## 2. Objetivo principal
+
+O objetivo principal do site é converter interesse local em ação rápida, permitindo que o usuário conheça a BOX BEEF, consulte de forma prática os principais produtos e entre em contato ou vá até a unidade com poucos toques, principalmente pelo celular.
+
+## 3. Objetivos secundários
+
+1. Apresentar a BOX BEEF como uma marca de carnes premium acessível com experiência social urbana.
+2. Reforçar a proposta de consumo no local, espetinhos, drinks, cerveja gelada e happy hour.
+3. Facilitar o contato direto pelo WhatsApp.
+4. Facilitar o acesso ao Instagram oficial da marca.
+5. Facilitar a localização da unidade pelo Google Maps.
+6. Exibir o cardápio institucional de forma resumida e escaneável.
+7. Reforçar confiança e percepção de qualidade por meio de conteúdo visual e textual objetivo.
+8. Ajudar o usuário a decidir a visita em poucos segundos.
+9. Organizar as informações essenciais em seções simples e previsíveis.
+10. Garantir experiência rápida e confortável em dispositivos móveis.
+
+## 4. Público-alvo
+
+O público-alvo principal da BOX BEEF é composto por consumidores de Franca - SP e região que valorizam boa comida, carnes de qualidade e uma experiência social descontraída.
+
+Perfis prioritários:
+
+* Adultos jovens e adultos, aproximadamente entre 25 e 45 anos
+* Pessoas que buscam carnes premium com percepção de preço acessível
+* Clientes que apreciam espetinhos, drinks e cerveja gelada
+* Casais, grupos de amigos e colegas de trabalho
+* Pessoas em busca de happy hour e encontros pós-expediente
+* Usuários com comportamento mobile, que pesquisam rapidamente antes de decidir onde ir
+
+Dores e dúvidas do usuário antes da visita:
+
+* Onde fica a BOX BEEF?
+* Como falar rapidamente com a unidade?
+* O local é só para compra ou também para consumo no local?
+* O ambiente combina com happy hour?
+* O que tem no cardápio?
+* Os produtos são premium, mas acessíveis?
+* Qual o horário de funcionamento?
+* Vale a pena ir com amigos ou após o trabalho?
+* A marca tem perfil ativo no Instagram para ver fotos reais?
+
+## 5. Posicionamento e proposta de valor
+
+A BOX BEEF se posiciona como uma boutique de carnes premium acessível com experiência social urbana, unindo qualidade, praticidade e convivência em um só lugar.
+
+Proposta de valor:
+Entregar uma experiência local que combina carnes premium, espetinhos, drinks, cerveja gelada e consumo no local em um ambiente urbano, descontraído e convidativo, com acesso fácil e comunicação direta.
+
+Elementos centrais do posicionamento:
+
+* Premium acessível
+* Experiência urbana
+* Consumo no local
+* Happy hour forte
+* Qualidade com informalidade
+* Marca local com apelo gastronômico e social
+
+Diferenciais competitivos:
+
+* Combinação de boutique de carnes com experiência social no local
+* Oferta integrada de carnes premium, espetinhos, bebidas e happy hour
+* Proposta mais contemporânea e urbana do que um açougue tradicional
+* Comunicação direta e prática para conversão local
+* Cardápio com variedade de espetinhos tradicionais, especiais, sobremesas e bebidas
+* Forte apelo para encontros entre amigos, casais e pós-trabalho
+
+## 6. Requisitos funcionais
+
+1. O site deve possuir apenas uma única página principal.
+2. O site deve ter navegação interna por âncoras.
+3. O menu principal deve conter exatamente: Início, Sobre, Cardápio, Happy Hour e Contato.
+4. Cada item do menu deve direcionar para a respectiva seção interna da página.
+5. O topo da página deve apresentar a proposta principal da BOX BEEF de forma imediata.
+6. O CTA principal deve aparecer cedo na navegação, preferencialmente na primeira dobra em mobile.
+7. A seção Hero deve conter nome da marca, proposta de valor, apoio visual e CTA principal.
+8. A seção Sobre deve explicar quem é a BOX BEEF e seu conceito de marca.
+9. A seção Cardápio deve apresentar o cardápio institucional de forma resumida e organizada por grupos.
+10. O cardápio institucional deve contemplar ao menos as categorias principais identificadas: destaques/combos, espetinhos tradicionais, espetinhos especiais, sobremesas e bebidas.
+11. A seção Happy Hour deve comunicar a proposta social da marca e o horário correspondente.
+12. A seção Contato deve exibir endereço completo da unidade de Franca - SP.
+13. A seção Contato deve exibir telefone/WhatsApp.
+14. A seção Contato deve exibir horário de funcionamento.
+15. O site deve disponibilizar link direto para WhatsApp.
+16. O site deve disponibilizar link direto para o Instagram oficial.
+17. O site deve disponibilizar link direto para Google Maps.
+18. O site deve repetir CTAs relevantes ao longo da página, e não apenas no final.
+19. O site deve permitir leitura rápida e escaneável em celular.
+20. O site deve exibir informações essenciais sem exigir cadastro, login ou interação complexa.
+21. O site deve ter estrutura simples de atualização de textos, links, horários e imagens.
+22. O site não deve incluir sistema de reservas.
+23. O site não deve incluir blog.
+24. O site não deve incluir e-commerce.
+25. O site não deve incluir carrinho, checkout ou catálogo dinâmico.
+26. O site deve funcionar integralmente com HTML, CSS e JavaScript puro.
+27. O site deve apresentar a BOX BEEF como marca voltada à visita local e contato rápido.
+28. O rodapé ou bloco final deve reforçar contato, localização e links principais.
+
+## 7. Requisitos não funcionais
+
+1. O projeto deve seguir abordagem mobile first.
+2. O site deve priorizar carregamento rápido e estrutura leve.
+3. O conteúdo deve ser organizado para leitura escaneável.
+4. A navegação deve ser simples, previsível e rápida.
+5. O site deve ser responsivo para diferentes tamanhos de tela.
+6. O layout deve ser legível e com boa hierarquia visual.
+7. O projeto deve ser implementável e mantido apenas com HTML, CSS e JavaScript puro.
+8. O site não deve depender de frameworks, bibliotecas externas, CMS ou APIs complexas.
+9. O código deve ser simples e de fácil manutenção.
+10. O conteúdo deve refletir o contexto real da BOX BEEF em Franca - SP.
+11. O site deve evitar excesso de elementos visuais que prejudiquem desempenho.
+12. Botões e links devem ter área de toque adequada para uso em celular.
+13. O contraste entre texto e fundo deve favorecer legibilidade.
+14. As seções devem ser claramente separadas visualmente.
+15. As imagens devem ser relevantes, leves e otimizadas para web.
+16. Os links externos devem funcionar corretamente.
+17. O site deve transmitir confiança, qualidade e clareza logo no início da experiência.
+18. A solução deve ser compatível com navegadores modernos em desktop e mobile.
+
+## 8. Estrutura da single page
+
+### Hero / apresentação principal
+
+Propósito: apresentar a BOX BEEF, resumir sua proposta de valor e destacar a principal ação desejada logo no início.
+
+### Sobre a BOX BEEF
+
+Propósito: explicar o conceito da marca, o posicionamento premium acessível e a experiência social urbana.
+
+### Produtos / Cardápio
+
+Propósito: mostrar as categorias principais do cardápio institucional e reforçar variedade, qualidade e apelo gastronômico.
+
+### Happy Hour
+
+Propósito: comunicar o momento de consumo social, reforçando drinks, cerveja gelada, espetinhos e clima ideal para encontro e pós-trabalho.
+
+### Contato e Localização
+
+Propósito: facilitar contato imediato, navegação até a unidade e acesso às informações práticas de visita.
+
+## 9. CTAs principais
+
+CTA principal:
+
+* Falar no WhatsApp
+
+CTAs secundários:
+
+* Ver cardápio
+* Como chegar
+* Ver Instagram
+* Chamar agora
+* Venha para o Happy Hour
+
+Diretrizes:
+
+* O CTA principal deve aparecer no Hero.
+* O CTA principal deve reaparecer no Cardápio, Happy Hour e Contato.
+* O CTA “Como chegar” deve estar presente na seção de contato/localização.
+* O CTA “Ver Instagram” deve apoiar prova visual e social da marca.
+* O CTA “Ver cardápio” deve aparecer cedo para usuários com intenção prática.
+
+## 10. Conteúdos necessários por seção
+
+### Hero / apresentação principal
+
+* Logo da BOX BEEF
+* Headline principal
+* Subheadline com a proposta da marca
+* Texto curto destacando carnes premium, espetinhos, drinks, cerveja gelada e consumo no local
+* CTA principal para WhatsApp
+* CTA secundário para cardápio ou localização
+* Imagem principal da marca, produtos ou ambiente
+
+### Sobre a BOX BEEF
+
+* Título da seção
+* Texto institucional breve sobre a marca
+* Explicação do conceito de boutique de carnes premium acessível
+* Explicação da proposta social urbana
+* Lista curta de diferenciais
+* Imagem de apoio de ambiente, produto ou experiência
+
+### Produtos / Cardápio
+
+* Título da seção
+* Texto introdutório curto
+* Destaque para combo especial
+* Blocos resumidos por categoria:
+
+  * Destaques / Combos
+  * Espetinhos tradicionais
+  * Espetinhos especiais
+  * Sobremesas
+  * Bebidas
+* Texto de apoio reforçando que o cardápio exibido é institucional
+* CTA para WhatsApp
+
+### Happy Hour
+
+* Título da seção
+* Texto curto reforçando o clima social e urbano
+* Faixa de horário do happy hour
+* Destaques como espetinhos, drinks e cerveja gelada
+* Chamada para encontro com amigos ou pós-trabalho
+* CTA para WhatsApp ou Maps
+* Imagem de apoio
+
+### Contato e Localização
+
+* Título da seção
+* Endereço completo: R. José de Melo, 350 - Parque Francal, Franca - SP, 14403-073
+* Telefone/WhatsApp: (16) 99281-0772
+* Instagram oficial
+* Link para Google Maps
+* Horário geral: 10:00–23:00
+* Horário de entrega: 09:00–22:00
+* Horário de happy hour: 17:00–23:00
+* Texto final convidando para visita
+* Rodapé institucional simples
+
+## 11. Informações pendentes
+
+| Item                                                                             | Prioridade | Impacto no projeto                                                      |
+| -------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------------------- |
+| Link oficial formatado do WhatsApp com mensagem padrão                           | crítica    | Necessário para implementar corretamente o CTA principal                |
+| Link direto do Google Maps da unidade                                            | crítica    | Necessário para CTA de localização e rota                               |
+| Confirmação final dos horários oficiais da unidade de Franca                     | crítica    | Impacta credibilidade, conteúdo da seção de contato e decisão de visita |
+| Confirmação final do horário oficial de happy hour da unidade de Franca          | crítica    | Impacta diretamente a seção Happy Hour e a promessa principal do site   |
+| Validação institucional do texto de posicionamento da marca                      | importante | Garante aderência ao discurso oficial da BOX BEEF                       |
+| Seleção final das imagens reais que serão usadas no site                         | importante | Impacta percepção de qualidade e autenticidade                          |
+| Definição exata de quais categorias do cardápio entrarão na versão institucional | importante | Evita excesso de conteúdo e garante consistência com o escopo enxuto    |
+| Definição do item ou combo principal de destaque no Hero/Cardápio                | importante | Ajuda a reforçar apelo comercial da página                              |
+| Arquivo final da logo em formato ideal para web                                  | importante | Impacta qualidade visual e implementação                                |
+| Slogan oficial da marca, se existir                                              | opcional   | Pode fortalecer headline e identidade verbal                            |
+| Prova social autorizada, avaliações ou frases de clientes                        | opcional   | Pode aumentar credibilidade sem ampliar escopo funcional                |
+| Informações legais para rodapé, se desejadas                                     | opcional   | Pode complementar institucionalmente a página                           |
+
+## 12. Critérios de aceite
+
+1. O site possui apenas uma única página.
+2. O menu principal exibe exatamente: Início, Sobre, Cardápio, Happy Hour e Contato.
+3. Todos os itens do menu levam corretamente às seções internas da própria página.
+4. O Hero comunica de forma clara a proposta da BOX BEEF logo no início.
+5. O CTA principal está visível cedo em mobile.
+6. O site comunica claramente que a BOX BEEF combina carnes premium, consumo no local, espetinhos, drinks, cerveja gelada e happy hour.
+7. A seção Sobre apresenta o conceito da marca com clareza.
+8. A seção Cardápio apresenta o cardápio institucional de forma resumida e organizada.
+9. A seção Happy Hour comunica o apelo social da marca e o horário correspondente.
+10. A seção Contato apresenta endereço, telefone/WhatsApp, Instagram e acesso ao Maps.
+11. Os links para WhatsApp, Instagram e Google Maps funcionam corretamente.
+12. O site exibe o endereço completo da unidade de Franca - SP.
+13. O site exibe os horários informados da unidade.
+14. A navegação em celular é fluida e rápida.
+15. O conteúdo está organizado em blocos curtos e escaneáveis.
+16. O layout é responsivo para mobile e desktop.
+17. O projeto não utiliza frameworks, bibliotecas externas, CMS ou APIs complexas.
+18. O projeto não inclui sistema de reservas.
+19. O projeto não inclui blog.
+20. O projeto não inclui e-commerce.
+21. O site pode ser implementado com HTML, CSS e JavaScript puro.
+22. O escopo final permanece institucional, enxuto e de manutenção simples.
+
+## 13. Escopo aprovado da versão 1
+
+A versão 1 contempla:
+
+* Site institucional single page
+* Navegação interna por âncoras
+* Seções: Hero, Sobre, Cardápio, Happy Hour e Contato/Localização
+* Conteúdo institucional da marca
+* CTA principal para WhatsApp
+* Integrações simples por link com WhatsApp, Instagram e Google Maps
+* Exibição de endereço, telefone e horários
+* Cardápio institucional resumido por categorias
+* Estrutura mobile first
+* Implementação futura com HTML, CSS e JavaScript puro
+* Layout enxuto, legível e de manutenção simples
+
+Fora do escopo da versão 1:
+
+* Sistema de reservas
+* Blog
+* E-commerce
+* Catálogo dinâmico
+* Carrinho ou checkout
+* Painel administrativo
+* Login ou cadastro
+* APIs complexas
+* Bibliotecas externas
+* CMS
+* Múltiplas páginas
+
+Creator’s Note:
+
+Thanks for using Copywriter GPT! We’d love your feedback to improve your experience.
+👉 Feedback Survey ([https://docs.google.com/forms/d/e/1FAIpQLSc8_UD9LF820YPBciAFqFMpg8UMA_vysIdVLk5-HeYmge6pZQ/viewform](https://docs.google.com/forms/d/e/1FAIpQLSc8_UD9LF820YPBciAFqFMpg8UMA_vysIdVLk5-HeYmge6pZQ/viewform)).

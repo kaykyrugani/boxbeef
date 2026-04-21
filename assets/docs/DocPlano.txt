@@ -1,0 +1,443 @@
+# Planejamento do Projeto — BOX BEEF Single Page
+
+## 1. Premissas de entrada
+
+O planejamento considera como base obrigatória o Documento de Requisitos — BOX BEEF Single Page já aprovado, mantendo o escopo institucional enxuto, em uma única página, com navegação por âncoras internas, foco em conversão local e abordagem mobile first.
+
+Premissas consolidadas para esta etapa:
+
+* O site será one page, sem páginas secundárias.
+* A navegação principal será composta por: Início, Sobre, Cardápio, Happy Hour e Contato.
+* O objetivo principal é transformar interesse local em ação rápida: chamar no WhatsApp, consultar o cardápio, ver Instagram e traçar rota.
+* O projeto futuro será implementado apenas com HTML, CSS e JavaScript puro.
+* Não haverá blog, e-commerce, sistema de reservas, CMS, SPA, bundlers, bibliotecas externas ou integrações complexas.
+* A proposta da marca é de boutique de carnes premium acessível com experiência social urbana.
+* O conteúdo deve ser escaneável, com CTA principal visível cedo e navegação rápida no celular.
+* O cardápio será apresentado de forma institucional e resumida por categorias, sem reproduzir integralmente a experiência de delivery.
+* Foram recebidas como insumo desta etapa:
+
+  * logo da BOX BEEF
+  * endereço: R. José de Melo, 350 - Parque Francal, Franca - SP, 14403-073
+  * telefone/WhatsApp: (16) 99281-0772
+  * Instagram: [https://www.instagram.com/boxbeeffranca/](https://www.instagram.com/boxbeeffranca/)
+  * horário base informado: 10:00–23:00
+  * entrega: 09:00–22:00
+  * happy hour: 17:00–23:00
+  * prints do cardápio com categorias e itens
+* A referência “Box Beef, Chão & Brasa Moema” com happy hour das 17h às 20h não deve ser usada como verdade do projeto, pois indica outra unidade/contexto e conflita com os dados enviados para Franca.
+
+## 2. Arquitetura da single page
+
+A arquitetura do site será linear, orientada à rolagem vertical e dividida em blocos semânticos independentes, cada um com função clara de comunicação e conversão.
+
+Estrutura macro:
+
+* Header fixo ou semi-fixo com logo, menu por âncoras e CTA curto
+* Main com cinco seções principais
+* Footer institucional simples com reforço de contato e localização
+
+Arquitetura proposta:
+
+1. Header / Navegação
+2. Hero / Início
+3. Sobre
+4. Cardápio
+5. Happy Hour
+6. Contato e Localização
+7. Footer
+
+Função de cada bloco:
+
+* Header: navegação rápida e acesso imediato ao CTA principal
+* Hero: apresentar proposta de valor e iniciar conversão
+* Sobre: contextualizar marca e posicionamento
+* Cardápio: provar variedade, qualidade e acessibilidade percebida
+* Happy Hour: destacar experiência social urbana e motivo de visita
+* Contato: reduzir atrito para falar, visitar ou seguir a marca
+* Footer: fechamento institucional e repetição de links úteis
+
+## 3. Fluxo de navegação por âncoras
+
+A navegação será interna, simples e previsível, usando IDs semânticos nas seções e links âncora no menu principal.
+
+Fluxo principal:
+
+* Início → `#inicio`
+* Sobre → `#sobre`
+* Cardápio → `#cardapio`
+* Happy Hour → `#happy-hour`
+* Contato → `#contato`
+
+Fluxos secundários por CTA:
+
+* CTA principal no Hero → link para WhatsApp
+* CTA secundário no Hero → âncora para `#cardapio` ou link para Google Maps
+* CTA na seção Sobre → âncora para `#cardapio`
+* CTA na seção Cardápio → link para WhatsApp
+* CTA na seção Happy Hour → link para WhatsApp ou Maps
+* CTA na seção Contato → WhatsApp, Instagram e Maps
+
+Regras de navegação:
+
+* O usuário deve alcançar qualquer seção em no máximo um toque a partir do menu.
+* Em mobile, o menu deve ser compacto e de acesso imediato.
+* A navegação por âncora deve considerar offset visual para não ocultar títulos sob header fixo.
+* O item “Contato” deve ser facilmente acessível sem necessidade de rolagem extensa.
+
+## 4. Hierarquia de informação
+
+A hierarquia seguirá lógica de decisão do usuário local, do mais importante para o mais explicativo.
+
+Hierarquia primária:
+
+1. O que é a BOX BEEF
+2. Por que visitar
+3. O que tem no cardápio
+4. Quando ir para happy hour
+5. Como entrar em contato e chegar
+
+Hierarquia por dobra:
+
+* Primeira dobra:
+
+  * logo
+  * headline
+  * proposta de valor
+  * CTA principal
+  * CTA secundário
+* Segunda dobra:
+
+  * explicação curta da marca
+  * diferenciais principais
+* Terceira dobra:
+
+  * categorias do cardápio
+  * destaques institucionais
+* Quarta dobra:
+
+  * faixa/área dedicada ao happy hour
+  * horários e apelo social
+* Quinta dobra:
+
+  * endereço
+  * WhatsApp
+  * Instagram
+  * Maps
+  * horário de funcionamento
+
+Ordem de prioridade de elementos em mobile:
+
+1. Headline
+2. CTA principal
+3. Texto curto de proposta
+4. Acesso ao cardápio
+5. Acesso ao Maps
+6. Diferenciais
+7. Happy hour
+8. Contato completo
+
+## 5. Componentes reutilizáveis
+
+Os componentes reutilizáveis devem ser poucos, consistentes e fáceis de manter.
+
+Componentes previstos:
+
+* Header
+* Logo da marca
+* Menu de navegação
+* Botão primário
+* Botão secundário
+* Card de destaque
+* Card de categoria de cardápio
+* Bloco de texto institucional
+* Lista de diferenciais
+* Faixa promocional de happy hour
+* Bloco de contato
+* Bloco de link externo
+* Rodapé institucional
+
+Padronização esperada:
+
+* Botões com duas variações: primário e secundário
+* Cards com mesma estrutura visual e espaçamentos consistentes
+* Títulos de seção com padrão único
+* Blocos de texto com largura controlada para leitura rápida
+* Ícones podem ser substituídos por texto simples caso não se use SVG próprio
+
+## 6. Estrutura de arquivos e pastas
+
+```text
+box-beef-single-page/
+├── index.html
+├── assets/
+│   ├── css/
+│   │   ├── reset.css
+│   │   ├── variables.css
+│   │   ├── base.css
+│   │   ├── layout.css
+│   │   ├── components.css
+│   │   └── sections.css
+│   ├── js/
+│   │   └── main.js
+│   ├── images/
+│   │   ├── logo/
+│   │   │   └── logoboxbeef.jpg
+│   │   ├── hero/
+│   │   │   └── hero-box-beef.jpg
+│   │   ├── cardapio/
+│   │   │   ├── destaque-combo.jpg
+│   │   │   ├── espetinhos-tradicionais.jpg
+│   │   │   ├── espetinhos-especiais.jpg
+│   │   │   ├── sobremesas.jpg
+│   │   │   └── bebidas.jpg
+│   │   └── ambience/
+│   │       └── happy-hour-box-beef.jpg
+│   └── icons/
+│       ├── whatsapp.svg
+│       ├── instagram.svg
+│       ├── maps.svg
+│       └── menu.svg
+├── docs/
+│   ├── requisitos.md
+│   └── planejamento.md
+└── README.md
+```
+
+## 7. Wireframe textual de baixa fidelidade
+
+1. Header
+
+   * Logo à esquerda
+   * Menu por âncoras
+   * CTA curto “WhatsApp” ou “Falar agora”
+
+2. Hero / Início
+
+   * Headline principal
+   * Subheadline com proposta premium acessível + experiência social urbana
+   * Texto curto com carnes premium, espetinhos, drinks e cerveja gelada
+   * Botão principal: falar no WhatsApp
+   * Botão secundário: ver cardápio ou como chegar
+   * Imagem principal da marca/produto/ambiente
+
+3. Sobre
+
+   * Título da seção
+   * Texto institucional curto
+   * Bloco com 3 a 4 diferenciais
+   * Imagem complementar de ambiente ou produto
+
+4. Cardápio
+
+   * Título da seção
+   * Texto introdutório curto
+   * Bloco de destaques
+   * Grade de categorias:
+
+     * Combos e destaques
+     * Espetinhos tradicionais
+     * Espetinhos especiais
+     * Sobremesas
+     * Bebidas
+   * CTA para WhatsApp
+
+5. Happy Hour
+
+   * Título da seção
+   * Chamada de experiência social
+   * Texto curto com faixa de horário
+   * Benefícios em leitura rápida
+   * CTA para visitar ou chamar no WhatsApp
+   * Imagem/apoio visual
+
+6. Contato e Localização
+
+   * Título da seção
+   * Endereço completo
+   * Horário de funcionamento
+   * Horário de happy hour
+   * Botões:
+
+     * WhatsApp
+     * Instagram
+     * Google Maps
+   * Telefone visível
+   * Texto final de convite
+
+7. Footer
+
+   * Logo reduzida ou nome da marca
+   * Endereço resumido
+   * Links principais
+   * Direitos/autoria institucional simples
+
+## 8. Plano de conteúdo por seção
+
+### Header
+
+* Logo BOX BEEF
+* Itens do menu
+* CTA curto de contato
+
+### Hero / Início
+
+* Headline com proposta clara
+* Subheadline com benefício e contexto
+* Texto curto de apoio
+* CTA principal para WhatsApp
+* CTA secundário para cardápio ou rota
+* Imagem principal com alto apelo visual
+
+### Sobre
+
+* Quem é a BOX BEEF
+* Conceito de boutique de carnes premium acessível
+* Explicação do ambiente social urbano
+* Lista curta de diferenciais
+
+### Cardápio
+
+* Introdução institucional ao cardápio
+* Destaque para combo especial
+* Agrupamento visual por categorias, sem listar todos os itens
+* Exemplos de categorias mapeadas a partir dos prints:
+
+  * Combos especiais
+  * Espetinhos tradicionais
+  * Espetinhos especiais
+  * Sobremesas
+  * Bebidas
+* Frase de apoio convidando para consultar disponibilidade pelo WhatsApp
+
+### Happy Hour
+
+* Chamada específica da experiência
+* Faixa de horário: 17:00–23:00
+* Texto reforçando encontro com amigos, pós-trabalho e clima descontraído
+* Relação com drinks, cerveja gelada e espetinhos
+* CTA de visita/contato
+
+### Contato e Localização
+
+* Endereço completo
+* Telefone/WhatsApp
+* Link do Instagram
+* Link do Google Maps
+* Horário geral: 10:00–23:00
+* Horário de entrega: 09:00–22:00
+* Horário de happy hour: 17:00–23:00
+* Texto final de conversão local
+
+### Footer
+
+* Nome da marca
+* Endereço resumido
+* Repetição leve de links importantes
+* Encerramento institucional
+
+## 9. Decisões técnicas
+
+**Semântica HTML**
+
+* Usar estrutura semântica com `header`, `nav`, `main`, `section`, `footer`.
+* Cada seção principal deve possuir `id` para navegação por âncora.
+* Títulos devem respeitar hierarquia lógica de `h1`, `h2` e subtítulos.
+* Botões que levam a destinos externos podem ser implementados como links estilizados.
+* Informações de contato devem usar marcação apropriada para telefone, endereço e links.
+
+**Organização CSS**
+
+* Separar responsabilidades em arquivos simples: reset, variáveis, base, layout, componentes e seções.
+* Usar naming consistente e previsível.
+* Priorizar CSS enxuto, sem duplicação desnecessária.
+* Estruturar estilos mobile first, com media queries progressivas para telas maiores.
+* Definir tokens básicos em `variables.css` para cores, espaçamentos, tipografia e raios.
+
+**Organização JS**
+
+* Manter um único arquivo `main.js`.
+* Usar JavaScript apenas para interações leves, como:
+
+  * comportamento do menu mobile
+  * destaque de navegação ativa, se necessário
+  * rolagem suave, se implementada manualmente
+* Evitar lógica complexa e dependência de estado elaborado.
+* Não usar JavaScript para renderizar conteúdo principal.
+
+**Uso de imagens**
+
+* Usar a logo enviada como base oficial da marca.
+* Selecionar poucas imagens fortes e relevantes em vez de muitas imagens pequenas.
+* Priorizar imagens reais dos produtos e do ambiente.
+* Criar versões otimizadas para web.
+* Usar `alt` descritivo e dimensões controladas para evitar layout shift.
+* O cardápio institucional não deve depender de galeria extensa nem carrossel obrigatório.
+
+**Links externos**
+
+* WhatsApp deve abrir conversa direta com número configurado.
+* Instagram deve apontar para o perfil oficial enviado.
+* Google Maps deve apontar para o endereço da unidade de Franca.
+* Links externos podem abrir em nova aba por conveniência, com consistência em todo o projeto.
+
+**Responsividade**
+
+* O layout será desenhado primeiro para telas pequenas.
+* Conteúdo em coluna única no mobile.
+* Expansão para duas colunas apenas onde houver ganho claro em tablet/desktop.
+* Botões e links devem ter área de toque confortável.
+* Imagens devem escalar sem cortes críticos de informação.
+
+**Navegação por âncoras**
+
+* As âncoras devem funcionar no menu e em CTAs internos.
+* O header, se fixo, exige compensação visual no topo das seções.
+* A rolagem entre seções deve ser clara e previsível.
+* O nome das âncoras deve ser legível e alinhado ao menu:
+
+  * `#inicio`
+  * `#sobre`
+  * `#cardapio`
+  * `#happy-hour`
+  * `#contato`
+
+## 10. Cronograma waterfall
+
+| Etapa        | Entrada                                                                     | Saída                                                        | Dependência  |
+| ------------ | --------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------ |
+| Requisitos   | Contexto do negócio, objetivo do site, restrições de escopo                 | Documento de Requisitos aprovado                             | Nenhuma      |
+| Planejamento | Documento de Requisitos aprovado, dados da marca, logo, cardápio, contato   | Planejamento estrutural e técnico do projeto                 | Requisitos   |
+| Design       | Planejamento aprovado, identidade visual disponível, conteúdos consolidados | Direção visual, layout de tela, definição estética por seção | Planejamento |
+| HTML         | Layout definido, arquitetura validada, conteúdo estruturado                 | Estrutura semântica completa da single page                  | Design       |
+| CSS          | HTML estruturado, direção visual aprovada                                   | Estilização responsiva mobile first                          | HTML         |
+| JavaScript   | HTML e CSS implementados                                                    | Interações leves de navegação e usabilidade                  | CSS          |
+| Testes       | Página implementada em HTML/CSS/JS                                          | Ajustes de usabilidade, responsividade, links e consistência | JavaScript   |
+| Deploy       | Build final validada em testes                                              | Publicação da single page em ambiente final                  | Testes       |
+
+## 11. Checklist de prontidão para etapa de design
+
+* Documento de requisitos validado
+* Planejamento estrutural aprovado
+* Escopo da versão 1 confirmado como single page institucional
+* Menu definido com: Início, Sobre, Cardápio, Happy Hour e Contato
+* Arquitetura de seções definida
+* Hierarquia de informação definida
+* CTAs principais definidos
+* Endereço confirmado
+* Telefone/WhatsApp confirmado
+* Instagram confirmado
+* Horários consolidados para a unidade de Franca
+* Uso do happy hour definido com base local: 17:00–23:00
+* Logo disponível para uso
+* Categorias do cardápio consolidadas para exibição institucional
+* Decisão tomada de não reproduzir todo o cardápio em detalhe
+* Estrutura de arquivos aprovada
+* Estratégia mobile first aprovada
+* Decisões técnicas de HTML, CSS e JS aprovadas
+* Sem inclusão de funcionalidades fora do escopo
+* Projeto pronto para seguir para wireframe visual e design de interface
+
+Creator’s Note:
+
+Thanks for using Copywriter GPT! We’d love your feedback to improve your experience.
+👉 Feedback Survey ([https://docs.google.com/forms/d/e/1FAIpQLSc8_UD9LF820YPBciAFqFMpg8UMA_vysIdVLk5-HeYmge6pZQ/viewform](https://docs.google.com/forms/d/e/1FAIpQLSc8_UD9LF820YPBciAFqFMpg8UMA_vysIdVLk5-HeYmge6pZQ/viewform)).

@@ -1,0 +1,536 @@
+# Especificação de Design UI/UX — BOX BEEF Single Page
+
+---
+
+## 1. Direção visual consolidada
+
+A interface deve materializar o conceito **“dark urban premium barbecue”** com equilíbrio entre sofisticação e acessibilidade.
+
+Visualmente, o site deve transmitir:
+
+* Ambiente noturno urbano
+* Sensação de calor (fogo, brasa, iluminação âmbar)
+* Texturas visuais implícitas de carne, grelha e metal
+* Energia social (encontro, happy hour)
+
+Evitar:
+
+* Visual “luxo frio” (excesso de preto + dourado elitizado)
+* Estética de açougue tradicional
+* Layout genérico de restaurante
+
+Resultado esperado:
+
+* Forte impacto inicial
+* Clareza imediata do que é a BOX BEEF
+* Sensação de lugar para ir agora, não só admirar
+
+---
+
+## 2. Princípios de experiência
+
+Baseado nos requisitos funcionais e objetivos do projeto :
+
+* **Decisão rápida**: usuário deve entender tudo em até 5–8 segundos
+* **Ação imediata**: WhatsApp sempre visível ou próximo
+* **Leitura escaneável**: blocos curtos, títulos fortes
+* **Mobile-first real**: tudo pensado primeiro em 360–420px
+* **Baixa fricção**: nenhum elemento desnecessário
+* **Conversão local**: foco em ir até o local ou entrar em contato
+
+---
+
+## 3. Design system
+
+### 3.1 Paleta de cores
+
+| Token                | Hex     | Uso principal     | Uso secundário |
+| -------------------- | ------- | ----------------- | -------------- |
+| color-bg-primary     | #0A0A0A | Fundo principal   | Hero, footer   |
+| color-bg-secondary   | #151515 | Seções alternadas | Cards          |
+| color-bg-tertiary    | #232323 | Destaques leves   | Hover          |
+| color-primary        | #D61F26 | CTA principal     | Links ativos   |
+| color-primary-hover  | #F3272F | Hover CTA         | Destaques      |
+| color-accent         | #C97A2B | Destaques quentes | Ícones         |
+| color-accent-strong  | #A85E1A | Hover/acento      | Bordas         |
+| color-text-primary   | #F5F1EA | Texto principal   | Headings       |
+| color-text-secondary | #C9C9C9 | Texto secundário  | Labels         |
+| color-border         | #2A2A2A | Divisores         | Cards          |
+
+---
+
+### 3.2 Tipografia
+
+**Títulos:**
+
+* `font-family: "Oswald", "Arial Narrow", Arial, sans-serif`
+* Estilo condensado, forte e vertical
+
+**Texto corrido:**
+
+* `font-family: "Inter", Arial, Helvetica, sans-serif`
+* Alta legibilidade em mobile
+
+Fallback seguro obrigatório.
+
+---
+
+### 3.3 Escala tipográfica
+
+* display: 36px / 1.2
+* h1: 28px / 1.2
+* h2: 22px / 1.3
+* h3: 18px / 1.3
+* body-lg: 16px / 1.5
+* body: 14px / 1.5
+* small: 12px / 1.4
+* label: 11px / 1.3 (uppercase, letter-spacing)
+
+---
+
+### 3.4 Espaçamentos e grid
+
+Base: **8px**
+
+* xs: 8px
+* sm: 12px
+* md: 16px
+* lg: 24px
+* xl: 32px
+* xxl: 48px
+* section-spacing: 64px (mobile) / 96px (desktop)
+
+Grid:
+
+* Mobile: 1 coluna
+* Tablet+: até 2 colunas (quando necessário)
+
+---
+
+### 3.5 Containers e largura útil
+
+* max-width: 1120px
+* padding lateral:
+
+  * mobile: 16px
+  * desktop: 24px
+* conteúdo centralizado
+
+---
+
+### 3.6 Bordas, superfícies e sombras
+
+* border-radius:
+
+  * botões: 6px
+  * cards: 8px
+
+* sombras:
+
+  * leve: `0 4px 12px rgba(0,0,0,0.3)`
+  * hover: `0 6px 18px rgba(0,0,0,0.4)`
+
+* superfícies:
+
+  * sempre contraste sutil com fundo
+
+---
+
+### 3.7 Botões
+
+**Primário (CTA principal):**
+
+* fundo: vermelho (#D61F26)
+* texto: branco quente
+* padding: 14px 18px
+* font-weight: 600
+
+Hover:
+
+* fundo: #F3272F
+* leve escala (1.02)
+
+**Secundário:**
+
+* fundo: transparente
+* borda: 1px sólido (#C97A2B)
+* texto: #C97A2B
+
+---
+
+### 3.8 Links e navegação
+
+* cor padrão: #C9C9C9
+* hover: branco
+* ativo: vermelho
+
+Menu:
+
+* uppercase
+* tamanho pequeno (label)
+
+---
+
+### 3.9 Cards e blocos de conteúdo
+
+* fundo: #151515
+* padding: 16–20px
+* borda leve
+* hover:
+
+  * leve elevação
+  * borda mais visível
+
+---
+
+### 3.10 Banners, badges e blocos de destaque
+
+* fundo escuro + overlay vermelho/âmbar
+* badge:
+
+  * fundo: vermelho
+  * texto: branco
+  * tamanho pequeno
+
+---
+
+### 3.11 Estados interativos
+
+Botões:
+
+* hover: brilho + leve escala
+* active: leve escurecimento
+
+Menu:
+
+* ativo: sublinhado ou cor vermelha
+* scroll spy opcional
+
+Mobile menu:
+
+* slide lateral ou dropdown escuro
+
+Cards:
+
+* hover: sombra + borda destaque
+
+---
+
+## 4. Diretrizes de imagens e mídia
+
+* close-up de carne, fogo, grelha
+* bebidas com condensação
+* ambiente com luz quente
+
+Regras:
+
+* temperatura quente
+* contraste alto
+* overlay escuro obrigatório (30–50%)
+
+Evitar:
+
+* imagens frias ou claras
+* bancos genéricos sem identidade
+
+---
+
+## 5. Diretrizes de responsividade
+
+Mobile:
+
+* coluna única
+* CTA sempre visível cedo
+* botões grandes (mín 44px altura)
+
+Desktop:
+
+* uso moderado de 2 colunas
+* manter foco vertical
+
+---
+
+## 6. Especificação dos componentes reutilizáveis
+
+**Header**
+
+* fixo no topo
+* fundo semi-transparente escuro
+* CTA pequeno à direita
+
+**Hero**
+
+* imagem full width
+* overlay escuro
+* texto central ou alinhado à esquerda
+
+**CTA duplo**
+
+* botão primário + secundário lado a lado (mobile: empilhado)
+
+**Bloco institucional**
+
+* título + texto curto
+
+**Lista de diferenciais**
+
+* 3–4 itens com ícone ou texto destacado
+
+**Cards de categoria**
+
+* nome + breve descrição
+
+**Faixa Happy Hour**
+
+* fundo com cor de destaque (âmbar/vermelho)
+
+**Bloco de contato**
+
+* botões grandes e clicáveis
+
+**Rodapé**
+
+* simples e escuro
+
+---
+
+## 7. Especificação por seção
+
+---
+
+### 7.1 Início / Hero
+
+**Objetivo visual**
+Impacto imediato + clareza da proposta
+
+**Ordem interna do conteúdo**
+
+1. Headline
+2. Subheadline
+3. Texto curto
+4. CTA principal
+5. CTA secundário
+
+**Estratégia de atenção visual**
+
+* contraste forte
+* botão vermelho dominante
+
+**Componentes usados**
+
+* Hero
+* CTA duplo
+
+**CTA principal**
+
+* Falar no WhatsApp
+
+**CTA secundário**
+
+* Ver cardápio
+
+**Observações mobile**
+
+* texto curto (máx 3 linhas)
+* botão visível sem scroll
+
+**Observações desktop**
+
+* possível divisão em 2 colunas
+
+---
+
+### 7.2 Sobre
+
+**Objetivo visual**
+Construir confiança
+
+**Ordem interna do conteúdo**
+
+1. Título
+2. Texto
+3. Diferenciais
+
+**Estratégia de atenção visual**
+
+* blocos bem espaçados
+
+**Componentes usados**
+
+* bloco institucional
+* lista de diferenciais
+
+**CTA principal**
+
+* opcional leve (não dominante)
+
+**CTA secundário**
+
+* nenhum obrigatório
+
+**Observações mobile**
+
+* leitura rápida
+
+**Observações desktop**
+
+* imagem ao lado opcional
+
+---
+
+### 7.3 Cardápio
+
+**Objetivo visual**
+Mostrar variedade rapidamente
+
+**Ordem interna do conteúdo**
+
+1. Título
+2. Destaque (combo)
+3. Categorias
+
+**Estratégia de atenção visual**
+
+* cards escaneáveis
+
+**Componentes usados**
+
+* cards de categoria
+
+**CTA principal**
+
+* WhatsApp
+
+**CTA secundário**
+
+* nenhum obrigatório
+
+**Observações mobile**
+
+* scroll vertical claro
+
+**Observações desktop**
+
+* grid 2 colunas
+
+---
+
+### 7.4 Happy Hour
+
+**Objetivo visual**
+Transmitir energia social
+
+**Ordem interna do conteúdo**
+
+1. Título
+2. Texto
+3. Horário
+4. CTA
+
+**Estratégia de atenção visual**
+
+* faixa destacada
+
+**Componentes usados**
+
+* banner promocional
+
+**CTA principal**
+
+* WhatsApp
+
+**CTA secundário**
+
+* Como chegar
+
+**Observações mobile**
+
+* destaque forte
+
+**Observações desktop**
+
+* imagem lateral
+
+---
+
+### 7.5 Contato e Localização
+
+**Objetivo visual**
+Eliminar fricção
+
+**Ordem interna do conteúdo**
+
+1. Endereço
+2. Botões
+3. Horários
+4. Instagram
+
+**Estratégia de atenção visual**
+
+* botões grandes
+
+**Componentes usados**
+
+* bloco de contato
+
+**CTA principal**
+
+* WhatsApp
+
+**CTA secundário**
+
+* Como chegar
+
+**Observações mobile**
+
+* botões full width
+
+**Observações desktop**
+
+* possível 2 colunas
+
+---
+
+## 8. Regras de contraste e acessibilidade visual
+
+* mínimo contraste AA
+* texto claro sobre fundo escuro
+* evitar vermelho para textos longos
+* tamanho mínimo: 14px
+
+---
+
+## 9. Placeholders e tratamento de informações pendentes
+
+Reservar espaço para:
+
+* link WhatsApp formatado
+* link Maps
+* imagens reais
+* logo oficial
+* combo destaque
+* slogan (se houver)
+* prova social
+
+Todos substituíveis facilmente.
+
+---
+
+## 10. Checklist de handoff para HTML/CSS
+
+* estrutura com IDs: #inicio, #sobre, #cardapio, #happy-hour, #contato
+* header fixo com offset de scroll
+* botões com classes: primary / secondary
+* sistema de espaçamento baseado em múltiplos de 8
+* containers com max-width definido
+* imagens com overlay via CSS
+* menu mobile funcional (JS mínimo)
+* links externos configurados
+* CTA repetido nas seções corretas
+* tipografia consistente
+* contraste validado
+* sem dependência de frameworks
+
+---
+
+Essa especificação está diretamente alinhada com os requisitos e planejamento aprovados  e pronta para implementação sem necessidade de reinterpretação.
